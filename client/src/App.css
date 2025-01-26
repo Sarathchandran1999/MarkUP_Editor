@@ -1,0 +1,93 @@
+body{font-family:sans-serif;}
+.main-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: lightseagreen;
+  padding: 20px;
+}
+
+.editor-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: bisque;
+}
+
+.container {
+  display: flex;
+  width: 100%; /* Full width of the parent */
+  max-width: 1200px; /* Maximum width for larger screens */
+  height: 80vh; /* Height of the container */
+ 
+  overflow: hidden;
+  gap: 10px; /* Remove gap to ensure both textareas fit */
+}
+
+.text-area {
+  width: 50%; /* Each textarea takes up 50% of the container */
+  height: 100%; /* Full height of the container */
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  resize: none;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 5px; /* Rounded corners for a polished look */
+}
+
+.left {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.right {
+  background-color: #4e4646;
+  color:white;
+}
+
+/* Responsive styles for 1024px screens */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%; /* Adjust width for better spacing on smaller screens */
+    height: 70vh; /* Reduce height */
+    gap: 10px; /* Add gap */
+  }
+
+  .text-area {
+    width: 48%; /* Adjust width slightly to account for the gap */
+    height: 100%;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .editor-heading {
+    font-size: 24px;
+  }
+}
+
+/* Responsive styles for smaller screens (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the textareas vertically */
+    height: auto; /* Allow auto height */
+  }
+
+  .text-area {
+    width: 100%; /* Full width for each textarea */
+    height: 300px; /* Fixed height */
+  }
+}
+
+/* Responsive styles for extra-small screens (480px and below) */
+@media (max-width: 480px) {
+  .text-area {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%; /* Adjust width for smaller devices */
+  }
+}
